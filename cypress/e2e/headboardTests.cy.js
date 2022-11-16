@@ -19,14 +19,88 @@ describe('Tests Headboard', () => {
     })
 
     it('Click on Contact', () => {
+        cy.get(':nth-child(2) > .nav-link').click()
     })
 
     it('Click on Contact-Close',() => {
-        cy.on('#exampleModal')
+        cy.get('#exampleModal').should('be.visible').contains('button', 'Close')
         cy.get('#exampleModal > .modal-dialog > .modal-content > .modal-footer > .btn-secondary').click()
-        })
-    
+    })
 
+    it('Click on Contact-SendMessage', () => {
+
+    })
+
+    it('Click on Contact-SendMessage-Accept', () => {
+        
+    })
+
+    it('Click on About Us', () => {
+        
+    })
+
+    it('Click on AboutUs-Click on video', () => {
+        
+    })
+
+    it('Click on Cart', () => {
+        
+    })
+
+    it('Click on Cart-DeleteProduct', () => {
+        
+    })
+
+    it('Click on Cart-PlaceOrder', () => {
+        
+    })
+
+    it('Click on Cart-PlaceOrder-Close', () => {
+        
+    })
+
+    it('Click on Cart-PlaceOrder-Purchase', () => {
+        
+    })
+
+    it('Click on Cart-PlaceOrder-Purchase-InvalidData', () => {
+        
+    })
+
+    it('Click on Cart-PlaceOrder-Purchase-Ok', () => {
+        
+    })
+
+    it('Click on Log in', () => {
+        
+    })
+
+    it('Click on LogIn-Close', () => {
+        
+    })
+
+    it('Click on LogIn-Log in', () => {
+        
+    })
+
+    it('Click on LogIn-LogIn-InvalidData', () => {
+        
+    })
+
+    it('Click on Sign up', () => {
+        
+    })
+
+    it('Click on SignUp-Close', () => {
+        
+    })
+
+    it('Click on SignUp-Sign up', () => {
+        
+    })
+
+    it('Click on Login-LogIn-NameChosen', () => {
+        
+    })
  
-
 })
