@@ -4,24 +4,25 @@ describe('Tests Exhibitor', () => {
         cy.visit('https://www.demoblaze.com/')
     })
 
-    it('Click on product Name', () => {
-        cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').click()
+    it('Click on right arrow navigation', () => {
+        cy.get('.carousel-control-next-icon').click()
     })
 
-    it('Click on product Image', () => {
-        cy.get(':nth-child(1) > .card > :nth-child(1) > .card-img-top').click()
+    it('lick on left arrow navigation', () => {
+        cy.get('.carousel-control-next-icon').click()
     })
 
-    it('Click on product Description', () => { 
-        cy.get(':nth-child(1) > .card > .card-block > #article').click()
+    it('First button navigation', () => { 
+        cy.get('[data-slide-to="0"]').click()
     })
 
-    it('Click on next', () => {
-        cy.get('#prev2').click()
+    it('Second button navigation', () => {
+        cy.get('[data-slide-to="1"]').click()
     })
+
+    it('Third button navigation', () => {
+        cy.get('[data-slide-to="2"]').click()
+    })
+
 })
-describe('Tests Catalog', () => {
-    it('Click on previous', () => {
-        cy.get('#next2').click()
-    })
-})
+
