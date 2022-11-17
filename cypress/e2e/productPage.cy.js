@@ -6,12 +6,12 @@ describe('Tests Product Page', () => {
     })
 
     it('Add to cart', () => {
-        cy.get('.col-sm-12 > .btn').click()
-        
+        cy.contains('Add to cart').click()
+
     })
 
-    it('AddToCart-Accept', () => {
-        
-    })
+    // it('AddToCart-Accept', () => {
+    //  Este popup no aparece al clicar dentro del cypress
+    // })
 
 })

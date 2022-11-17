@@ -2,20 +2,21 @@
 describe('Tests Categories', () => {
     it('Select phones category', () => {
         cy.visit('https://www.demoblaze.com/')
-        cy.get('[onclick="byCat(\'phone\')"]').click()
-        cy.contains('Phones').click()
+        cy.get('[onclick="byCat(\'phone\')"]').click(cy.wait(5000))
+        cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').should('have.text', 'Samsung galaxy s6')
+
     })
 
     it('Select Laptops category', () => {
-        cy.visit('https://www.demoblaze.com/')
-        cy.get('[onclick="byCat(\'notebook\')"]').click()
-        cy.contains('Laptops').click()
+        cy.get('[onclick="byCat(\'notebook\')"]').click(cy.wait(5000))
+        cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').should('have.text', 'Sony vaio i5')
+
     })
 
     it('Select Monitors category', () => {
-        cy.visit('https://www.demoblaze.com/')
-        cy.get('[onclick="byCat(\'monitor\')"]').click()
-        cy.contains('Monitors').click()
+        cy.get('[onclick="byCat(\'monitor\')"]').click(cy.wait(5000))
+        cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').should('have.text', 'Apple monitor 24')
+
     })
 
     //  it('Select a category without products', () => {
