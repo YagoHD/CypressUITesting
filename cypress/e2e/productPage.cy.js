@@ -7,8 +7,9 @@ describe('Tests Product Page', () => {
 
     it('Add to cart', () => {
         cy.contains('Add to cart').click()
-
-    })
+        cy.get('#cartur').click(cy.wait(3000))
+        cy.get('#totalp').should('have.text', '360')
+        })
 
     // it('AddToCart-Accept', () => {
     //  Este popup no aparece al clicar dentro del cypress
