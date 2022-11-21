@@ -11,8 +11,12 @@ describe('Tests Product Page', () => {
         cy.get('#totalp').should('have.text', '360')
         })
 
-    // it('AddToCart-Accept', () => {
-    //  Este popup no aparece al clicar dentro del cypress
-    // })
-
+     it('AddToCart-Accept', () => {
+        cy.contains('Add to cart').click()
+        cy.get('#cartur').click(cy.wait(3000))
+        cy.get('#totalp').should('have.text', '360')
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal(`Product added`)
+          })
+     })
 })
