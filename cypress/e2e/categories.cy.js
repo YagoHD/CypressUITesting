@@ -11,7 +11,7 @@ describe('Tests Categories', () => {
         cy.get('[onclick="byCat(\'notebook\')"]').click(cy.wait(5000))
         cy.get(':nth-child(1) > .card > .card-block > .card-title > .hrefch').should('have.text', 'Sony vaio i5')
 
-    }) 
+    })
 
     it('Select Monitors category', () => {
         cy.get('[onclick="byCat(\'monitor\')"]').click(cy.wait(5000))
